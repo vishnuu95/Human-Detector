@@ -13,8 +13,6 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 
 
-option(COVERAGE "Generate Coverage Data" OFF)
-
 if (COVERAGE)
     include(CodeCoverage)
     set(LCOV_REMOVE_EXTRA "'vendor/*'")

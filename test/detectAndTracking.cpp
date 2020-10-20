@@ -1,3 +1,10 @@
+/**
+ *  @file    main.cpp
+ *  @author  Vasista (clueless-bachu)
+ *  @author  Vishnuu (vishnuu95)
+ *  @brief This file contains test all test cases for Detection and Tracking
+ *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
+ */
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include <bits/stdc++.h>
@@ -6,8 +13,12 @@
 #include <Eigen/Dense>
 #include "robot.hpp"
 
-class checkDetTrackClass : public ::testing::Test
-{
+/**
+* @brief Class for unit testing the DetTrack Class
+* @param None
+* @return None
+*/
+class checkDetTrackClass : public ::testing::Test {
 protected: // default variables
   string modelPath = NULL;
   string imgPath = NULL;
@@ -16,29 +27,51 @@ protected: // default variables
   DetTrack *tracker;
 
 public:
-  checkDetTrackClass()
-  {
+  /**
+  * @brief Constructor class for checkDetTrackClass
+  * @param None
+  * @return None
+  */
+  checkDetTrackClass() {
 
   } // constructor
-  virtual ~checkDetTrackClass()
-  {
+
+  /**
+  * @brief Destructor class for checkDetTrackClass
+  * @param None
+  * @return None
+  */
+  virtual ~checkDetTrackClass() {
   } // destructor
 
-  virtual void
-  SetUp()
-  { // required method that is called at the start of every TEST_F
+  /**
+  * @brief required method that is called at the start of every TEST_F
+  * @param None
+  * @return None
+  */
+  virtual void SetUp() { 
   	modelPath = "../models/yolo.pth";
     imgPath = "../data/sample_img.png";
     tracker = new DetTrack(modelPath);
   }
-  virtual void
-  TearDown()
-  { // required method that is called at the end of every TEST_F
+
+  /**
+  * @brief required method that is called at the end of every TEST_F. It deletes the DetTrack 
+  * object
+  * @param None
+  * @return None
+  */
+  virtual void TearDown() { 
     delete tracker;
   }
 
-  double calcIOU(vector<int> boxA, vector<int> boxB)
-  {
+  /**
+  * @brief calculates the IoU metric for two bounding boxes
+  * @param boxA - the first bounding box
+  * @param boxB - the second bounding box
+  * @return iou - the metric value of IoU
+  */
+  double calcIOU(vector<int> boxA, vector<int> boxB) {
     auto xA = max(boxA[0], boxB[0]);
     auto yA = max(boxA[1], boxB[1]);
     auto xB = min(boxA[2], boxB[2]);
@@ -58,7 +91,8 @@ public:
   }
 };
 
-TEST_F(checkDetTrackClass, unitTest)
+
+TEST_F(checkDetTrackClass, detectAndTrackTest)
 {
   cv::Mat img = cv::imread(imgPath);
   vector<vector<int>> labels(2, vector<int>(5, 1));
