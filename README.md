@@ -30,9 +30,9 @@ https://docs.google.com/spreadsheets/d/1YPsMStteSjXmPFDnUeONrdbhdRGQZ498H-M4ctVb
 
 * ~~Design UML diagrams and Activity Flow~~
 * ~~Download and install required technologies~~
-* Declare all classes
-* Add stub Functions for each class
-* Create pipeline for detection and tracking
+* ~~Declare all classes~~
+* ~~Add stub Functions for each class~~
+* ~~Create pipeline for detection and tracking~~
 * Add unit test cases
 * Pass all Static testing cppcheck, cpplint, travis and coveralls
 * ~~Identify DL Model Source Repositories~~
