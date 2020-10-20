@@ -6,12 +6,17 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
 #include <Eigen/Dense>
+#include <bits/stdc++.h>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
 #include <opencv2/tracking/tracker.hpp>
 #include "robot.hpp"
+
+using std::max;
+using std::min;
+using std::string;
+using std::vector;
 
 /**
 * @brief Class for unit testing the DetTrack Class
@@ -19,7 +24,7 @@
 * @return None
 */
 class checkDetTrackClass : public ::testing::Test {
- protected: // default variables
+ protected:  // default variables
   string modelPath = NULL;
   string imgPath = NULL;
   string labelPath = NULL;
@@ -33,8 +38,7 @@ class checkDetTrackClass : public ::testing::Test {
   * @return None
   */
   checkDetTrackClass() {
-
-  } // constructor
+  }  // constructor
 
   /**
   * @brief Destructor class for checkDetTrackClass
@@ -42,7 +46,7 @@ class checkDetTrackClass : public ::testing::Test {
   * @return None
   */
   virtual ~checkDetTrackClass() {
-  } // destructor
+  }  // destructor
 
   /**
   * @brief required method that is called at the start of every TEST_F
@@ -85,7 +89,8 @@ class checkDetTrackClass : public ::testing::Test {
     // # compute the intersection over union by taking the intersection
     // # area and dividing it by the sum of prediction + ground-truth
     // # areas - the interesection area
-    double iou = interArea / static_cast<double>(boxAArea + boxBArea - interArea);
+    double iou = interArea
+    / static_cast<double>(boxAArea + boxBArea - interArea);
     // # return the intersection over union value
     return iou;
   }
@@ -122,7 +127,7 @@ TEST_F(checkDetTrackClass, detectAndTrackTest) {
         break;
       }
     }
-    ASSERT_TRUE(match_found); // check if atleast one match is found between the labels and detections
+    ASSERT_TRUE(match_found);
   }
-  ASSERT_NE(boxes[0][4], boxes[1][4]); // check if the Identifiers are different. This is for tracker.
+  ASSERT_NE(boxes[0][4], boxes[1][4]);
 }

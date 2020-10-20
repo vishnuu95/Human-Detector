@@ -6,15 +6,20 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
-#include<bits/stdc++.h>
+#include<string>
 #include "./depthEstimator.hpp"
 #include "./transformation.hpp"
 #include "./ioHandler.hpp"
 #include "./preprocess.hpp"
 #include "./detTrack.hpp"
 
-using namespace std;
-using namespace vision;
+using std::string;
+using std::vector;
+using vision::IOHandler;
+using vision::DetTrack;
+using vision::Preprocessor;
+using vision::DepthEstimator;
+using vision::Transformation;
 
 namespace robot {
 
@@ -27,7 +32,7 @@ class Robot {
     DepthEstimator *depthEstimator;
     Transformation *transformer;
 
-    Robot(string);
+    explicit Robot(string);
     ~Robot();
     void processData();
 };

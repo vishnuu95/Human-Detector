@@ -5,12 +5,11 @@
  *  @brief This file contains all test cases for Depth Estimation module
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
-
+#include <Eigen/Dense>
 #include <gtest/gtest.h>
 #include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
 #include <opencv2/tracking/tracker.hpp>
-#include <Eigen/Dense>
 #include "robot.hpp"
 
 /**

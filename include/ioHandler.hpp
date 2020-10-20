@@ -6,9 +6,11 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
-#include<bits/stdc++.h>
+#include <string>
+#include <vector>
 
-using namespace std;
+using std::string;
+using std::vector;
 namespace vision {
 
 class IOHandler {
