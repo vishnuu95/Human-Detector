@@ -6,11 +6,15 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
 #include <gtest/gtest.h>
+#include <Eigen/Dense>
 #include <bits/stdc++.h>
+#include <utility>
 #include "opencv2/opencv.hpp"
 #include <opencv2/tracking/tracker.hpp>
-#include <Eigen/Dense>
 #include "preprocess.hpp"
+
+using std::string;
+using std::pair;
 
 using vision::Preprocessor;
 /**
@@ -21,10 +25,10 @@ using vision::Preprocessor;
 TEST(preprocessing, imageTest) {
     string path = "../data/sample_image.png";
     cv::Mat inImg = cv::imread(path);
-    cv::Mat outImg;
+    cv::Mat* outImg;
     pair<int, int> size = pair<int, int>(100, 100);
-    Preprocessor::preprocess(size, 0, inImg, outImg);
+    Preprocessor::preprocess(size, 0, &inImg, outImg);
 
-    EXPECT_EQ(outImg.size().width, size.second);
-    EXPECT_EQ(outImg.size().height, size.first);
+    EXPECT_EQ(outImg->size().width, size.second);
+    EXPECT_EQ(outImg->size().height, size.first);
 }

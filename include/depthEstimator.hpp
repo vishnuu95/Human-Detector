@@ -7,7 +7,7 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
-#include<bits/stdc++.h>
+#include <vector>
 
 using std::vector;
 

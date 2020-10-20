@@ -6,16 +6,19 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
 #include <bits/stdc++.h>
+#include <Eigen/Dense>
 #include "opencv2/opencv.hpp"
 #include <opencv2/tracking/tracker.hpp>
-#include <Eigen/Dense>
 #include "robot.hpp"
+
+using std::cout;
+using std::endl;
 
 using robot::Robot;
 
 int main(int argc, char **argv) {
     if (argc != 2) {
-        cout << "Please provide a single argument which is a path to the cfg file" << endl;
+        cout << "Provide a path to the cfg file" << endl;
         return -1;
     }
 

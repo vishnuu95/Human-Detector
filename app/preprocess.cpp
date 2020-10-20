@@ -21,6 +21,6 @@ using vision::Preprocessor;
 * @return None
 */
 void Preprocessor::preprocess
-(pair<int, int> size, int blurKernel, cv::Mat &inImg, cv::Mat &outImg) {
+(pair<int, int> size, int blurKernel, cv::Mat* inImg, cv::Mat* outImg) {
     return;
 }

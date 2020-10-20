@@ -7,9 +7,11 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
-#include<bits/stdc++.h>
+#include <string>
+#include <vector>
 
-using namespace std;
+using std::string;
+using std::vector;
 namespace vision {
 
 class DetTrack {
@@ -18,7 +20,7 @@ class DetTrack {
     cv::dnn::Net *yoloModel;
 
  public:
-    DetTrack(string);
+    explicit DetTrack(string);
     ~DetTrack();
     void addTrackers(vector<vector<int>>, vector<vector<int>>);
     vector<vector<int>> detectHumans(cv::Mat *);

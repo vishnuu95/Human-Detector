@@ -6,7 +6,7 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
-#include<bits/stdc++.h>
+#include<utility>
 
 using std::pair;
 
@@ -15,7 +15,7 @@ namespace vision {
 class Preprocessor {
  private:
  public:
-    static void preprocess(pair<int, int>, int, cv::Mat &, cv::Mat &);
+    static void preprocess(pair<int, int>, int, cv::Mat* , cv::Mat*);
 };
 
 }  // namespace vision
