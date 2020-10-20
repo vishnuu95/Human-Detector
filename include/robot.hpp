@@ -32,4 +32,9 @@ namespace robot
 		~Robot();
 	};
 
-} // namespace robot
+ 	Robot(string);
+ 	~Robot();
+ 	void processData();
+};
+
+}
