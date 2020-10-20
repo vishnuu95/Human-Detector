@@ -6,6 +6,7 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
+#include<bits/stdc++.h>
 #include "./depthEstimator.hpp"
 #include "./transformation.hpp"
 #include "./ioHandler.hpp"
@@ -17,17 +18,17 @@ using namespace vision;
 
 namespace robot {
 
-    class Robot {
-     private:
-     public:
-        IOHandler *ioh;
-        DetTrack *humanDetector;
-        Preprocessor *preprocessor;
-        DepthEstimator *depthEstimator;
-        Transformation *transformer;
+class Robot {
+ private:
+ public:
+    IOHandler *ioh;
+    DetTrack *humanDetector;
+    Preprocessor *preprocessor;
+    DepthEstimator *depthEstimator;
+    Transformation *transformer;
 
-        Robot(string);
-        ~Robot();
-        void processData();
-    };
+    Robot(string);
+    ~Robot();
+    void processData();
+};
 }  // namespace robot

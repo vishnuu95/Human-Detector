@@ -7,21 +7,22 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
+#include<bits/stdc++.h>
 
 using std::vector;
 
 namespace vision {
 
-    class DepthEstimator {
-     private:
-        double humanHeight;
-        vector<double> intrinsicParams;
+class DepthEstimator {
+ private:
+    double humanHeight;
+    vector<double> intrinsicParams;
 
-     public:
-        DepthEstimator();
-        ~DepthEstimator();
-        vector<double> estimateDepth(vector<vector<int>>);
-        vector<vector<double>> transform2dTo3d(vector<vector<int>>);
-    };
+ public:
+    DepthEstimator();
+    ~DepthEstimator();
+    vector<double> estimateDepth(vector<vector<int>>);
+    vector<vector<double>> transform2dTo3d(vector<vector<int>>);
+};
 
 }  // namespace vision

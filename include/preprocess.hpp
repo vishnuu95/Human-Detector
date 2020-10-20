@@ -6,15 +6,16 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
+#include<bits/stdc++.h>
 
-using namespace std;
+using std::pair;
 
 namespace vision {
 
-    class Preprocessor {
-     private:
-     public:
-        static void preprocess(pair<int, int>, int, cv::Mat &, cv::Mat &);
-    };
+class Preprocessor {
+ private:
+ public:
+    static void preprocess(pair<int, int>, int, cv::Mat &, cv::Mat &);
+};
 
 }  // namespace vision

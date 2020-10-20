@@ -6,21 +6,22 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
 #pragma once
+#include<bits/stdc++.h>
 
 using namespace std;
 
 namespace vision {
 
-    class Transformation {
-     private:
-        Eigen::Matrix4f *transform;
+class Transformation {
+ private:
+    Eigen::Matrix4f *transform;
 
-     public:
-        Transformation();
-        ~Transformation();
-        void setTransform(Eigen::Matrix4f);
-        Eigen::Matrix4f getTransform();
-        Eigen::Vector4f transformToRoboFrame(Eigen::Vector4f);
-    };
+ public:
+    Transformation();
+    ~Transformation();
+    void setTransform(Eigen::Matrix4f);
+    Eigen::Matrix4f getTransform();
+    Eigen::Vector4f transformToRoboFrame(Eigen::Vector4f);
+};
 
 }  // namespace vision

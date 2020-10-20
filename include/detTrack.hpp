@@ -7,21 +7,22 @@
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
+#include<bits/stdc++.h>
 
 using namespace std;
 namespace vision {
 
-    class DetTrack {
-     private:
-        cv::MultiTracker *trackers;
-        cv::dnn::Net *yoloModel;
+class DetTrack {
+ private:
+    cv::MultiTracker *trackers;
+    cv::dnn::Net *yoloModel;
 
-     public:
-        DetTrack(string);
-        ~DetTrack();
-        void addTrackers(vector<vector<int>>, vector<vector<int>>);
-        vector<vector<int>> detectHumans(cv::Mat *);
-        vector<vector<int>> trackHumans(cv::Mat *);
-    };
+ public:
+    DetTrack(string);
+    ~DetTrack();
+    void addTrackers(vector<vector<int>>, vector<vector<int>>);
+    vector<vector<int>> detectHumans(cv::Mat *);
+    vector<vector<int>> trackHumans(cv::Mat *);
+};
 
 }  // namespace vision
