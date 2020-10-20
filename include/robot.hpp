@@ -1,6 +1,9 @@
 #pragma once
-
-#include<iostream>
+#include "./depthEstimator.hpp"
+#include "./transformation.hpp"
+#include "./ioHandler.hpp"
+#include "./preprocess.hpp"
+#include "./detTrack.hpp"
 
 using namespace std;
 using namespace vision;

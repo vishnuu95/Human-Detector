@@ -14,7 +14,7 @@ class Transformation {
  	~Transformation();
  	void setTransform(Eigen::Matrix4f);
  	Eigen::Matrix4f getTransform();
- 	Eigen::Vector4f transform(Eigen::Vector4f);
+ 	Eigen::Vector4f Transform(Eigen::Vector4f);
 };
 
 }
