@@ -42,7 +42,7 @@ void Transformation::setTransform(Eigen::Matrix4f transMat) {
 * @param None
 * @return transMat - the transformation matrix from the camera frame to the robot frame
 */
-Eigen::Matrix4f getTransform() {
+Eigen::Matrix4f Transformation::getTransform() {
 	Eigen::Matrix4f transformationMat;
 	return transformationMat;
 }
@@ -52,7 +52,7 @@ Eigen::Matrix4f getTransform() {
 * @param camCord - 3D coordinate in the camera frame
 * @return newCords - New cordinates in the robot frame
 */
-Eigen::Vector4f Transform(Eigen::Vector4f camCord) {
+Eigen::Vector4f Transformation::transformToRoboFrame(Eigen::Vector4f camCord) {
 	Eigen::Vector4f newCords;
 	return newCords;
 }

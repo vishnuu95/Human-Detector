@@ -7,8 +7,6 @@
  */
 #pragma once
 
-#include <iostream>
-
 using namespace std;
 
 namespace vision
@@ -24,7 +22,7 @@ namespace vision
 		~Transformation();
 		void setTransform(Eigen::Matrix4f);
 		Eigen::Matrix4f getTransform();
-		Eigen::Vector4f Transform(Eigen::Vector4f);
+		Eigen::Vector4f transformToRoboFrame(Eigen::Vector4f);
 	};
 
 } // namespace vision

@@ -30,11 +30,6 @@ namespace robot
 
 		Robot(string);
 		~Robot();
+		void processData();
 	};
-
- 	Robot(string);
- 	~Robot();
- 	void processData();
-};
-
 }

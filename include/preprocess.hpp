@@ -19,4 +19,4 @@ namespace vision
 		static void preprocess(pair<int, int>, int, cv::Mat &, cv::Mat &);
 	};
 
-} // namespace vision
+}
