@@ -4,8 +4,18 @@
 #include <Eigen/Dense>
 #include "robot.hpp"
 
+using namespace robot;
 
-int main()
+int main(int argc, char **argv)
 {
+	if(argc != 2) {
+		cout<<"Please provide a single argument which is a path to the cfg file"<<endl;
+		return -1;
+	}
+
+    Robot robot(argv[1]);
+    robot.processData();
+
     return 0;
+
 }
