@@ -15,6 +15,9 @@ Main Features:
 * IOHanlder Module
 * Robot Module that shows demo of Perception Module Integration with Robot. 
 
+3 Minute Video for Phase 1
+[Video Link](https://www.youtube.com/watch?v=N3DkdJLmnMI&feature=youtu.be)
+
 ## Personnel 
 
 * Vasista Ayyagiri (clueless-bachu)
