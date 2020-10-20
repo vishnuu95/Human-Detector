@@ -2,14 +2,12 @@
 
 #include<iostream>
 
-
-
 using namespace std;
 namespace vision {
 
 class IOHandler {
  private:
- 	string outPath = NULL
+ 	string outPath = NULL;
  	string inPath = NULL;
  	bool isImg = false, ifVisualize = false;
  	cv::VideoWriter* video;
@@ -17,9 +15,9 @@ class IOHandler {
  public:
  	IOHandler();
  	~IOHandler();
- 	void argParse(int, **char);
+ 	void argParse(string);
  	bool getInputType();
- 	bool ifVisualize();;
+ 	bool isVisualize();
  	string getInFilePath();
  	string getOutFilePath();
 
