@@ -3,7 +3,7 @@
  *  @author  Vasista (clueless-bachu)
  *  @author  Vishnuu (vishnuu95)
  *  @brief This file has all function definitions for Robot class
- *	@copyright MIT License (c) 2020 Vasista and Vishnuu.
+ *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
 #include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
@@ -11,15 +11,14 @@
 #include <Eigen/Dense>
 #include "robot.hpp"
 
-using namespace robot;
+using robot::Robot;
 
 /**
 * @brief A constructor function for the Transformation class
 * @param modelPath:string - path to the config file
 * @return None
 */
-Robot::Robot(string cfgPath)
-{
+Robot::Robot(string cfgPath) {
 }
 
 /**
@@ -27,8 +26,7 @@ Robot::Robot(string cfgPath)
 * @param None
 * @return None
 */
-Robot::~Robot()
-{
+Robot::~Robot() {
 }
 
 /**
@@ -38,7 +36,6 @@ Robot::~Robot()
 * @param modelPath:string - path to the DNN model file
 * @return None
 */
-void Robot::processData()
-{
-	return;
+void Robot::processData() {
+    return;
 }

@@ -3,7 +3,7 @@
  *  @author  Vasista (clueless-bachu)
  *  @author  Vishnuu (vishnuu95)
  *  @brief robot class definition for demo purposes of the perception module. Takes in all other modules as attributes.
- *	@copyright MIT License (c) 2020 Vasista and Vishnuu
+ *  @copyright MIT License (c) 2020 Vasista and Vishnuu
  */
 #pragma once
 #include "./depthEstimator.hpp"
@@ -15,21 +15,19 @@
 using namespace std;
 using namespace vision;
 
-namespace robot
-{
+namespace robot {
 
-	class Robot
-	{
-	private:
-	public:
-		IOHandler *ioh;
-		DetTrack *humanDetector;
-		Preprocessor *preprocessor;
-		DepthEstimator *depthEstimator;
-		Transformation *transformer;
+    class Robot {
+     private:
+     public:
+        IOHandler *ioh;
+        DetTrack *humanDetector;
+        Preprocessor *preprocessor;
+        DepthEstimator *depthEstimator;
+        Transformation *transformer;
 
-		Robot(string);
-		~Robot();
-		void processData();
-	};
-} // namespace robot
+        Robot(string);
+        ~Robot();
+        void processData();
+    };
+}  // namespace robot

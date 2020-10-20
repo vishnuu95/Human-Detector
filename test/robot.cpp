@@ -3,7 +3,7 @@
  *  @author  Vasista (clueless-bachu)
  *  @author  Vishnuu (vishnuu95)
  *  @brief  Test file that tests functionalities of robot class
- *	@copyright MIT License (c) 2020 Vasista and Vishnuu.
+ *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
 #include <gtest/gtest.h>
 #include <bits/stdc++.h>
@@ -12,15 +12,14 @@
 #include <Eigen/Dense>
 #include "robot.hpp"
 
-using namespace robot;
+using robot::Robot;
 
 /**
  * @brief Test case to test the initialisation of the robot with the test config file
  * @param None
  * @return None
  */
-TEST(robotTest, initialisation)
-{
+TEST(robotTest, initialisation) {
   string cfgPath = "../cfg/test.cfg";
   Robot robot(cfgPath);
   EXPECT_EQ(1, 1);
@@ -31,8 +30,7 @@ TEST(robotTest, initialisation)
  * @param None
  * @return None
  */
-TEST(robotTest, dataProcessing)
-{
+TEST(robotTest, dataProcessing) {
   string cfgPath = "../cfg/test.cfg";
   Robot robot(cfgPath);
   robot.processData();

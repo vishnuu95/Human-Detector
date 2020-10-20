@@ -13,27 +13,12 @@
 #include <Eigen/Dense>
 #include "robot.hpp"
 
-/*
-(169, 43, 108, 268) -> right human
-(55, 45, 101, 287) -> left human
-Intrinsic matrix 
-K = [
-	100, 0, 0
-	0, 100, 0
-	0, 0 ,0
-	] in mm
-
-Average height = 1.70
-s = 2000 pixels/mm
-*/
-
 /**
  * @brief Test case to estimate depth value of detected objects
  * @param None
  * @return None
  */
-TEST(depthEstimation, estimateDepth)
-{
+TEST(depthEstimation, estimateDepth) {
   DepthEstimator depthE;
   vector<vector<int>> bbs = {
       {169, 43, 108, 268},
@@ -52,8 +37,7 @@ TEST(depthEstimation, estimateDepth)
  * @param None
  * @return None
  */
-TEST(depthEstimation, estimate)
-{
+TEST(depthEstimation, estimate) {
   DepthEstimator depthE;
   double threshold = 0.5;
   vector<vector<int>> bbs = {

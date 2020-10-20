@@ -1,10 +1,10 @@
 /**
- *  @file    ioHandling.cpp
- *  @author  Vasista (clueless-bachu)
- *  @author  Vishnuu (vishnuu95)
- *  @brief This file contains all test cases for ioHandler class
- *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
- */
+*  @file    ioHandling.cpp
+*  @author  Vasista (clueless-bachu)
+*  @author  Vishnuu (vishnuu95)
+*  @brief This file contains all test cases for ioHandler class
+*  @copyright MIT License (c) 2020 Vasista and Vishnuu.
+*/
 #include <gtest/gtest.h>
 #include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
@@ -13,12 +13,11 @@
 #include "robot.hpp"
 
 /**
- * @brief Test case to test the parsing of the cfg file
- * @param None
- * @return None
- */
-TEST(ioHandling, parsing)
-{
+* @brief Test case to test the parsing of the cfg file
+* @param None
+* @return None
+*/
+TEST(ioHandling, parsing) {
   IOHandler ioh;
   string path = "../cfg/arg.cfg";
   string inFile = "../data/sample_image.png";
@@ -35,8 +34,7 @@ TEST(ioHandling, parsing)
  * @param None
  * @return None
  */
-TEST(ioHandling, utilTesting)
-{
+TEST(ioHandling, utilTesting) {
   IOHandler ioh;
   string path = "../cfg/arg.cfg";
   string inFile = "../data/sample_image.png";

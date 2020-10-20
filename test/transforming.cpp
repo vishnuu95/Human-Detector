@@ -3,7 +3,7 @@
  *  @author  Vasista (clueless-bachu)
  *  @author  Vishnuu (vishnuu95)
  *  @brief  Test file that tests functionalities of Transformation class
- *	@copyright MIT License (c) 2020 Vasista and Vishnuu.
+ *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
 #include <gtest/gtest.h>
 #include <bits/stdc++.h>
@@ -12,20 +12,19 @@
 #include <Eigen/Dense>
 #include "transformation.hpp"
 
-using namespace vision;
+using vision::Transformation;
 
 /**
  * @brief Tests the Initialisation of the class
  * @param None
  * @return None
  */
-TEST(trans, initialisation)
-{
-	Transformation transformer;
-	Eigen::Matrix4f cam2roboTrans;
-	cam2roboTrans << 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1;
-	transformer.setTransform(cam2roboTrans);
-	EXPECT_EQ(transformer.getTransform(), cam2roboTrans);
+TEST(trans, initialisation) {
+    Transformation transformer;
+    Eigen::Matrix4f cam2roboTrans;
+    cam2roboTrans << 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1;
+    transformer.setTransform(cam2roboTrans);
+    EXPECT_EQ(transformer.getTransform(), cam2roboTrans);
 }
 
 /**
@@ -33,14 +32,13 @@ TEST(trans, initialisation)
  * @param None
  * @return None
  */
-TEST(transformation, transformCords)
-{
-	Transformation transformer;
-	Eigen::Matrix4f cam2roboTrans;
-	cam2roboTrans << 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1;
-	transformer.setTransform(cam2roboTrans);
+TEST(transformation, transformCords) {
+    Transformation transformer;
+    Eigen::Matrix4f cam2roboTrans;
+    cam2roboTrans << 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1;
+    transformer.setTransform(cam2roboTrans);
 
-	Eigen::Vector4f camCords;
-	camCords << 1, 2, 3, 4;
-	EXPECT_EQ(transformer.transformToRoboFrame(camCords), camCords);
+    Eigen::Vector4f camCords;
+    camCords << 1, 2, 3, 4;
+    EXPECT_EQ(transformer.transformToRoboFrame(camCords), camCords);
 }

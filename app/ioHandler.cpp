@@ -3,13 +3,14 @@
  *  @author  Vasista (clueless-bachu)
  *  @author  Vishnuu (vishnuu95)
  *  @brief This file has all function definitions for IOHandler class
- *	@copyright MIT License (c) 2020 Vasista and Vishnuu.
+ *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
+#include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
 #include <opencv2/tracking/tracker.hpp>
 #include "ioHandler.hpp"
 
-using namespace vision;
+using vision::IOHandler;
 
 /**
 * @brief A constructor function for the IOHandler class
@@ -17,7 +18,6 @@ using namespace vision;
 * @return None
 */
 IOHandler::IOHandler() {
-
 }
 
 /**
@@ -26,7 +26,6 @@ IOHandler::IOHandler() {
 * @return None
 */
 IOHandler::~IOHandler() {
-
 }
 
 /**
@@ -35,7 +34,7 @@ IOHandler::~IOHandler() {
 * @return None
 */
 void IOHandler::argParse(string cfgPath) {
-	return;
+    return;
 }
 
 /**
@@ -44,7 +43,7 @@ void IOHandler::argParse(string cfgPath) {
 * @return a boolean, if true then type is image, if false then type is video
 */
 bool IOHandler::getInputType() {
-	return false;
+    return false;
 }
 
 /**
@@ -53,7 +52,7 @@ bool IOHandler::getInputType() {
 * @return None
 */
 bool IOHandler::isVisualize() {
-	return false;
+    return false;
 }
 
 /**
@@ -62,8 +61,8 @@ bool IOHandler::isVisualize() {
 * @return path - path to the data file
 */
 string IOHandler::getInFilePath() {
-	string path = "";
-	return path;
+    string path = "";
+    return path;
 }
 
 /**
@@ -72,8 +71,8 @@ string IOHandler::getInFilePath() {
 * @return path - path to the data file
 */
 string IOHandler::getOutFilePath() {
-	string path = "";
-	return path;
+    string path = "";
+    return path;
 }
 
 /**
@@ -83,7 +82,7 @@ string IOHandler::getOutFilePath() {
 * @return None
 */
 void IOHandler::drawBb(vector<vector<int>> bb, cv::Mat frame) {
-	return;
+    return;
 }
 
 /**
@@ -92,7 +91,7 @@ void IOHandler::drawBb(vector<vector<int>> bb, cv::Mat frame) {
 * @return None
 */
 void IOHandler::addFrame(cv::Mat frame) {
-	return;
+    return;
 }
 
 /**
@@ -101,7 +100,7 @@ void IOHandler::addFrame(cv::Mat frame) {
 * @return None
 */
 void IOHandler::seeImg(cv::Mat frame) {
-	return;
+    return;
 }
 
 /**
@@ -110,7 +109,7 @@ void IOHandler::seeImg(cv::Mat frame) {
 * @return None
 */
 void IOHandler::seeVideo(vector<cv::Mat> frames) {
-	return;
+    return;
 }
 
 /**
@@ -120,7 +119,7 @@ void IOHandler::seeVideo(vector<cv::Mat> frames) {
 * @return None
 */
 void IOHandler::saveImg(string path, cv::Mat frame) {
-	return;
+    return;
 }
 
 /**
@@ -129,5 +128,5 @@ void IOHandler::saveImg(string path, cv::Mat frame) {
 * @return None
 */
 void IOHandler::saveVideo(string path) {
-	return;
+    return;
 }

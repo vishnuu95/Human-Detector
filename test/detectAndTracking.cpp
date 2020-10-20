@@ -5,12 +5,12 @@
  *  @brief This file contains test all test cases for Detection and Tracking
  *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
+#include <Eigen/Dense>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
 #include <opencv2/tracking/tracker.hpp>
-#include <Eigen/Dense>
 #include "robot.hpp"
 
 /**
@@ -18,23 +18,21 @@
 * @param None
 * @return None
 */
-class checkDetTrackClass : public ::testing::Test
-{
-protected: // default variables
+class checkDetTrackClass : public ::testing::Test {
+ protected: // default variables
   string modelPath = NULL;
   string imgPath = NULL;
   string labelPath = NULL;
   cv::Mat img = cv::imread(imgPath);
   DetTrack *tracker;
 
-public:
+ public:
   /**
   * @brief Constructor class for checkDetTrackClass
   * @param None
   * @return None
   */
-  checkDetTrackClass()
-  {
+  checkDetTrackClass() {
 
   } // constructor
 
@@ -43,8 +41,7 @@ public:
   * @param None
   * @return None
   */
-  virtual ~checkDetTrackClass()
-  {
+  virtual ~checkDetTrackClass() {
   } // destructor
 
   /**
@@ -52,8 +49,7 @@ public:
   * @param None
   * @return None
   */
-  virtual void SetUp()
-  {
+  virtual void SetUp() {
     modelPath = "../models/yolo.pth";
     imgPath = "../data/sample_img.png";
     tracker = new DetTrack(modelPath);
@@ -65,8 +61,7 @@ public:
   * @param None
   * @return None
   */
-  virtual void TearDown()
-  {
+  virtual void TearDown() {
     delete tracker;
   }
 
@@ -76,8 +71,7 @@ public:
   * @param boxB - the second bounding box
   * @return iou - the metric value of IoU
   */
-  double calcIOU(vector<int> boxA, vector<int> boxB)
-  {
+  double calcIOU(vector<int> boxA, vector<int> boxB) {
     auto xA = max(boxA[0], boxB[0]);
     auto yA = max(boxA[1], boxB[1]);
     auto xB = min(boxA[2], boxB[2]);
@@ -102,8 +96,7 @@ public:
  * @param None
  * @return None
 */
-TEST_F(checkDetTrackClass, detectAndTrackTest)
-{
+TEST_F(checkDetTrackClass, detectAndTrackTest) {
   cv::Mat img = cv::imread(imgPath);
   vector<vector<int>> labels(2, vector<int>(5, 1));
   auto iouThreshold = 0.7;
@@ -120,14 +113,11 @@ TEST_F(checkDetTrackClass, detectAndTrackTest)
 
   vector<vector<int>> boxes = tracker->trackHumans(&img);
   bool match_found = false;
-  for (auto box : boxes)
-  {
+  for (auto box : boxes) {
     match_found = false;
-    for (auto label : labels)
-    {
+    for (auto label : labels) {
       auto iou = calcIOU(box, label);
-      if (iou >= iouThreshold)
-      {
+      if (iou >= iouThreshold) {
         match_found = true;
         break;
       }

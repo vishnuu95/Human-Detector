@@ -9,23 +9,22 @@
  *  @author  Vasista (clueless-bachu)
  *  @author  Vishnuu (vishnuu95)
  *  @brief This file has all function definitions for DetTrack class
- *	@copyright MIT License (c) 2020 Vasista and Vishnuu.
+ *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
  */
 #include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
 #include <opencv2/tracking/tracker.hpp>
 #include "detTrack.hpp"
 
-using namespace std;
-using namespace vision;
+using std::vector;
+using vision::DetTrack;
 
 /**
 * @brief A constructor function for the DetTrack class
 * @param modelPath:string - path to the DNN model file
 * @return None
 */
-DetTrack::DetTrack(string modelPath)
-{
+DetTrack::DetTrack(string modelPath) {
 }
 
 /**
@@ -33,8 +32,7 @@ DetTrack::DetTrack(string modelPath)
 * @param None
 * @return None
 */
-DetTrack::~DetTrack()
-{
+DetTrack::~DetTrack() {
 }
 
 /**
@@ -43,9 +41,9 @@ DetTrack::~DetTrack()
 * @param bbDet - Bounding boxes obtained from the MultiTracker on the new frame
 * @return None
 */
-void DetTrack::addTrackers(vector<vector<int>> bbDet, vector<vector<int>> bbTrack)
-{
-	return;
+void DetTrack::addTrackers
+(vector<vector<int>> bbDet, vector<vector<int>> bbTrack) {
+    return;
 }
 
 /**
@@ -53,10 +51,9 @@ void DetTrack::addTrackers(vector<vector<int>> bbDet, vector<vector<int>> bbTrac
 * @param inImg - input image which needs to have th humans detected
 * @return None
 */
-vector<vector<int>> DetTrack::detectHumans(cv::Mat *inImg)
-{
-	vector<vector<int>> bbs;
-	return bbs;
+vector<vector<int>> DetTrack::detectHumans(cv::Mat *inImg) {
+    vector<vector<int>> bbs;
+    return bbs;
 }
 
 /**
@@ -64,6 +61,5 @@ vector<vector<int>> DetTrack::detectHumans(cv::Mat *inImg)
 * @param inImg - input image which needs to have th humans detected and tracked
 * @return None
 */
-vector<vector<int>> DetTrack::trackHumans(cv::Mat *inImg)
-{
+vector<vector<int>> DetTrack::trackHumans(cv::Mat *inImg) {
 }
