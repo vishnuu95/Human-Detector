@@ -1,9 +1,10 @@
 /**
-* @file ioHandler.cpp
-* @authors Phase 1 - Vasista Ayyagari (Driver), Vishnuu Appaya Dhanabalan (Navigator)
-* @brief This file has all function definitions for IOHandler class
-* @copyright Vasista Ayyagari, Vishnuu Appaya Dhanabalan, 2020
-*/
+ *  @file    ioHandler.cpp
+ *  @author  Vasista (clueless-bachu)
+ *  @author  Vishnuu (vishnuu95)
+ *  @brief This file has all function definitions for IOHandler class
+ *	@copyright MIT License (c) 2020 Vasista and Vishnuu.
+ */
 #include "opencv2/opencv.hpp"
 #include <opencv2/tracking/tracker.hpp>
 #include "ioHandler.hpp"

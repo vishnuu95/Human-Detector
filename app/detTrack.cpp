@@ -4,6 +4,13 @@
 * @brief This file has all function definitions for DetTrack class
 * @copyright Vasista Ayyagari, Vishnuu Appaya Dhanabalan, 2020
 */
+/**
+ *  @file    detTrack.cpp
+ *  @author  Vasista (clueless-bachu)
+ *  @author  Vishnuu (vishnuu95)
+ *  @brief This file has all function definitions for DetTrack class
+ *	@copyright MIT License (c) 2020 Vasista and Vishnuu.
+ */
 #include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
 #include <opencv2/tracking/tracker.hpp>

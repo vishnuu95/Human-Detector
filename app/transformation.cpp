@@ -1,9 +1,10 @@
 /**
-* @file transformation.cpp
-* @authors Phase 1 - Vasista Ayyagari (Driver), Vishnuu Appaya Dhanabalan (Navigator)
-* @brief This file has all function definitions for Transformation class
-* @copyright Vasista Ayyagari, Vishnuu Appaya Dhanabalan, 2020
-*/
+ *  @file    transformation.cpp
+ *  @author  Vasista (clueless-bachu)
+ *  @author  Vishnuu (vishnuu95)
+ *  @brief This file has all function definitions for Transformation class
+ *	@copyright MIT License (c) 2020 Vasista and Vishnuu.
+ */
 #include <bits/stdc++.h>
 #include <Eigen/Dense>
 #include "transformation.hpp"
