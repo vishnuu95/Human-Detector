@@ -1,3 +1,12 @@
+/**
+ *  @file    detTrack.hpp
+ *  @author  Vasista (clueless-bachu)
+ *  @author  Vishnuu (vishnuu95)
+ *  @date    10/20/2020
+ *  @brief Detection and Tracking Module decleration.
+ *	@copyright MIT License (c) 2020 Vasista and Vishnuu
+ */
+
 #pragma once
 
 using namespace std;
@@ -15,4 +24,4 @@ class DetTrack {
  	vector<vector<int>> trackHumans(cv::Mat*);
 };
 
-}
+} // namespace vision
