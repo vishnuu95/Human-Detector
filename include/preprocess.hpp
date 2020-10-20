@@ -10,6 +10,7 @@ class Preprocessor {
  private:
 
  public:
+ 	static preprocess(pair<int, int>, int, &cv::Mat, &cv::Mat);
 };
 
 }
