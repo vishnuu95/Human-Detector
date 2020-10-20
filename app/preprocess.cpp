@@ -20,9 +20,8 @@ using namespace vision;
 * @param inImg - the output pointer to the image where the final processed image is written
 * @return None
 */
-void Preprocessor::preprocess
-(
-	pair<int, int> size, int blurKernel, cv::Mat& inImg, cv::Mat& outImg
-) {
-	return;	
+void Preprocessor::preprocess(
+	pair<int, int> size, int blurKernel, cv::Mat &inImg, cv::Mat &outImg)
+{
+	return;
 }

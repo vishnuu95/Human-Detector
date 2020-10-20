@@ -1,6 +1,6 @@
 {
     // cpp general
-    "C_Cpp.clang_format_style": "visual studio",
+    "C_Cpp.clang_format_style": "Visual studio",
 
     // cmake
     "cmake.generator.all": "ninja",

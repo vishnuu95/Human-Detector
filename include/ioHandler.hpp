@@ -36,4 +36,4 @@ namespace vision
 		void saveVideo(string);
 	};
 
-}
+} // namespace vision

@@ -18,7 +18,8 @@
 * @param None
 * @return None
 */
-class checkDetTrackClass : public ::testing::Test {
+class checkDetTrackClass : public ::testing::Test
+{
 protected: // default variables
   string modelPath = NULL;
   string imgPath = NULL;
@@ -32,7 +33,8 @@ public:
   * @param None
   * @return None
   */
-  checkDetTrackClass() {
+  checkDetTrackClass()
+  {
 
   } // constructor
 
@@ -41,7 +43,8 @@ public:
   * @param None
   * @return None
   */
-  virtual ~checkDetTrackClass() {
+  virtual ~checkDetTrackClass()
+  {
   } // destructor
 
   /**
@@ -49,8 +52,9 @@ public:
   * @param None
   * @return None
   */
-  virtual void SetUp() { 
-  	modelPath = "../models/yolo.pth";
+  virtual void SetUp()
+  {
+    modelPath = "../models/yolo.pth";
     imgPath = "../data/sample_img.png";
     tracker = new DetTrack(modelPath);
   }
@@ -61,7 +65,8 @@ public:
   * @param None
   * @return None
   */
-  virtual void TearDown() { 
+  virtual void TearDown()
+  {
     delete tracker;
   }
 
@@ -71,7 +76,8 @@ public:
   * @param boxB - the second bounding box
   * @return iou - the metric value of IoU
   */
-  double calcIOU(vector<int> boxA, vector<int> boxB) {
+  double calcIOU(vector<int> boxA, vector<int> boxB)
+  {
     auto xA = max(boxA[0], boxB[0]);
     auto yA = max(boxA[1], boxB[1]);
     auto xB = min(boxA[2], boxB[2]);
@@ -91,7 +97,11 @@ public:
   }
 };
 
-
+/**
+ * @brief Test case for testing the detector and tracker
+ * @param None
+ * @return None
+*/
 TEST_F(checkDetTrackClass, detectAndTrackTest)
 {
   cv::Mat img = cv::imread(imgPath);
@@ -126,4 +136,3 @@ TEST_F(checkDetTrackClass, detectAndTrackTest)
   }
   ASSERT_NE(boxes[0][4], boxes[1][4]); // check if the Identifiers are different. This is for tracker.
 }
-

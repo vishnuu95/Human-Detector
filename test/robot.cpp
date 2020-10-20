@@ -1,3 +1,10 @@
+/**
+ *  @file    robot.cpp
+ *  @author  Vasista (clueless-bachu)
+ *  @author  Vishnuu (vishnuu95)
+ *  @brief  Test file that tests functionalities of robot class
+ *	@copyright MIT License (c) 2020 Vasista and Vishnuu.
+ */
 #include <gtest/gtest.h>
 #include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
@@ -7,14 +14,25 @@
 
 using namespace robot;
 
-TEST(robotTest, initialisation) {
+/**
+ * @brief Test case to test the initialisation of the robot with the test config file
+ * @param None
+ * @return None
+ */
+TEST(robotTest, initialisation)
+{
   string cfgPath = "../cfg/test.cfg";
   Robot robot(cfgPath);
   EXPECT_EQ(1, 1);
 }
 
-
-TEST(robotTest, dataProcessing) {
+/**
+ * @brief Test case to test the initialisation of the robot with the test config file
+ * @param None
+ * @return None
+ */
+TEST(robotTest, dataProcessing)
+{
   string cfgPath = "../cfg/test.cfg";
   Robot robot(cfgPath);
   robot.processData();

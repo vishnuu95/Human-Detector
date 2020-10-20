@@ -18,8 +18,8 @@ using namespace robot;
 * @param modelPath:string - path to the config file
 * @return None
 */
-Robot::Robot(string cfgPath) {
-
+Robot::Robot(string cfgPath)
+{
 }
 
 /**
@@ -27,8 +27,8 @@ Robot::Robot(string cfgPath) {
 * @param None
 * @return None
 */
-Robot::~Robot() {
-
+Robot::~Robot()
+{
 }
 
 /**
@@ -38,6 +38,7 @@ Robot::~Robot() {
 * @param modelPath:string - path to the DNN model file
 * @return None
 */
-void Robot::processData() {
+void Robot::processData()
+{
 	return;
 }

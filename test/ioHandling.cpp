@@ -1,3 +1,10 @@
+/**
+ *  @file    ioHandling.cpp
+ *  @author  Vasista (clueless-bachu)
+ *  @author  Vishnuu (vishnuu95)
+ *  @brief This file contains all test cases for ioHandler class
+ *  @copyright MIT License (c) 2020 Vasista and Vishnuu.
+ */
 #include <gtest/gtest.h>
 #include <bits/stdc++.h>
 #include "opencv2/opencv.hpp"
@@ -5,9 +12,13 @@
 #include <Eigen/Dense>
 #include "robot.hpp"
 
-// using namespace vision;
-
-TEST(ioHandling, parsing) {
+/**
+ * @brief Test case to test the parsing of the cfg file
+ * @param None
+ * @return None
+ */
+TEST(ioHandling, parsing)
+{
   IOHandler ioh;
   string path = "../cfg/arg.cfg";
   string inFile = "../data/sample_image.png";
@@ -19,8 +30,13 @@ TEST(ioHandling, parsing) {
   EXPECT_EQ(ioh.getOutFilePath(), outFile);
 }
 
-
-TEST(ioHandling, utilTesting) {
+/**
+ * @brief Test case to test all the utility functions such as seeImg, saveImg etc
+ * @param None
+ * @return None
+ */
+TEST(ioHandling, utilTesting)
+{
   IOHandler ioh;
   string path = "../cfg/arg.cfg";
   string inFile = "../data/sample_image.png";
@@ -29,9 +45,8 @@ TEST(ioHandling, utilTesting) {
 
   cv::Mat inImg = cv::imread(inFile);
   vector<vector<int>> bbs = {
-  	{169, 43, 108, 268},
-  	{55, 45, 101, 287}
-  };
+      {169, 43, 108, 268},
+      {55, 45, 101, 287}};
 
   ioh.drawBb(bbs, inImg);
   ioh.addFrame(inImg);
