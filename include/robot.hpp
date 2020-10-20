@@ -22,6 +22,7 @@ class Robot {
 
  	Robot(string);
  	~Robot();
+ 	void processData();
 };
 
 }

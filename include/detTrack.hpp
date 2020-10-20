@@ -1,9 +1,6 @@
 #pragma once
 
-#include<iostream>
-
 using namespace std;
-// change later name
 namespace vision {
 
 class DetTrack {
@@ -14,8 +11,8 @@ class DetTrack {
  	DetTrack(string);
  	~DetTrack();
  	void addTrackers(vector<vector<int>>, vector<vector<int>>);
- 	vector<vector<int>> detectHumans(cv::Mat);
- 	vector<vector<int>> trackHumans(cv::Mat);
+ 	vector<vector<int>> detectHumans(cv::Mat*);
+ 	vector<vector<int>> trackHumans(cv::Mat*);
 };
 
 }
