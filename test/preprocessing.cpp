@@ -25,10 +25,10 @@ using vision::Preprocessor;
 TEST(preprocessing, imageTest) {
     string path = "../data/sample_image.png";
     cv::Mat inImg = cv::imread(path);
-    cv::Mat* outImg;
+    cv::Mat outImg = cv::imread(path);
     pair<int, int> size = pair<int, int>(100, 100);
-    Preprocessor::preprocess(size, 0, &inImg, outImg);
+    Preprocessor::preprocess(size, 0, &inImg, &outImg);
 
-    EXPECT_EQ(outImg->size().width, size.second);
-    EXPECT_EQ(outImg->size().height, size.first);
+    EXPECT_EQ(outImg.size().width, size.second);
+    EXPECT_EQ(outImg.size().height, size.first);
 }
