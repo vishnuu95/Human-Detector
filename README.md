@@ -60,6 +60,8 @@ AIP Sheet - https://docs.google.com/spreadsheets/d/1YPsMStteSjXmPFDnUeONrdbhdRGQ
 * Pass all Static testing cppcheck, cpplint, travis and coveralls
 * ~~Identify DL Model Source Repositories~~
 * PHASE 2 - Implementation of Classes
+* Change Quadchart from PNG to PDF
+* Update travis yml for successfull build. 
 
 ## Known Issues
 
