@@ -18,13 +18,19 @@ matrix:
             - g++-5
             - cmake
             - cmake-data
-      env: COMPILER=g++-5
+      env: 
+        - COMPILER=g++-5
+        - EIGEN=3.2.9
+        - EIGEN=3.3-beta2
 
 before_install:
   - pip install --user cpp-coveralls
   - sudo -H pip install --upgrade requests[security]
 install:
   - sudo apt-get install -y -qq lcov
+  - wget https://bitbucket.org/eigen/eigen/get/$EIGEN.tar.bz2 -O /tmp/eigen.tar.bz2
+  - mkdir eigen3-src && tar -xvjf /tmp/eigen.tar.bz2 -C eigen3-src --strip-components 1
+  - cd eigen3-src && mkdir build && cd build && cmake .. && sudo make install && cd ../..
 script:
   - export CXX=$COMPILER;
   - mkdir build
