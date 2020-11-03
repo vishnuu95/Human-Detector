@@ -33,7 +33,10 @@ matrix:
             - libjasper-dev
             - libdc1394-22-dev
             - libboost-all-dev
-      env: COMPILER=g++-5
+      env: 
+        - COMPILER=g++-5
+        - EIGEN=3.2.9
+        - EIGEN=3.3-beta2
 
 #For OpenCV installation
 before_script:
@@ -64,6 +67,10 @@ before_install:
 install:
   - sudo apt-get install -y -qq lcov
   - sudo apt install libeigen3-dev
+  - wget https://bitbucket.org/eigen/eigen/get/$EIGEN.tar.bz2 -O /tmp/eigen.tar.bz2
+  - mkdir eigen3-src && tar -xvjf /tmp/eigen.tar.bz2 -C eigen3-src --strip-components 1
+  - cd eigen3-src && mkdir build && cd build && cmake .. && sudo make install && cd ../..
+
 script:
   - export CXX=$COMPILER;
   - mkdir build
